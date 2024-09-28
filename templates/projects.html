@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Projects - Personal Portfolio</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="static/assets/img/P-Letter-Logo.jpg" rel="icon">
+  <link href="static/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="static/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="static/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="static/assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="static/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="static/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="static/assets/css/main.css" rel="stylesheet">
+
+</head>
+
+<body class="portfolio-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+
+        <img src="static/assets/img/P-Letter-Logo.jpg" alt="">
+            <h1 class="sitename">Portfolio</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+            <li><a href="{{ url_for("home") }}" >Home</a></li>
+            <li><a href="{{ url_for("about") }}" >About</a></li>
+            <li><a href="{{ url_for("education") }}">Education</a></li>
+            <li><a href="{{ url_for("projects") }}" class="active">Projects</a></li>
+            <li><a href="{{ url_for("certifications") }}">Certifications</a></li>
+            <li><a href="{{ url_for("contact") }}">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title" data-aos="fade">
+      <div class="heading">
+        <div class="container">
+          <div class="row d-flex justify-content-center text-center">
+            <div class="col-lg-8">
+              <h1>Projects</h1>
+              <p class="mb-0">
+                Welcome to my project portfolio, where I showcase a diverse array of applications developed from the ground up. This section features web applications, automation tools, and bots that I designed to solve real-world problems. Each project is linked to its GitHub repository, allowing for a deeper exploration of my code and methodologies.<br><br>
+                With expertise in Python, HTML, CSS, JavaScript, SQL, and Flask, I leverage cutting-edge technologies in every project. My work also encompasses machine learning, data science, data analysis, and deep learning, demonstrating my ability to harness data-driven insights and create intelligent solutions.<br>
+                I invite recruiters to review my work and discover how my technical skills can contribute to your team's success.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav class="breadcrumbs">
+        <div class="container">
+          <ol>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li class="current">Projects</li>
+          </ol>
+        </div>
+      </nav>
+    </div><!-- End Page Title -->
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio section">
+
+      <div class="container">
+
+        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+
+          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
+            <li data-filter="*" class="filter-active">All</li>
+            <li data-filter=".filter-script">Scripting</li>
+            <li data-filter=".filter-gui">GUI</li>
+            <li data-filter=".filter-automation">Automation</li>
+            <li data-filter=".filter-ds">Data Science</li>
+            <li data-filter=".filter-wf">Web Foundation</li>
+            <li data-filter=".filter-ml">Machine Learning</li>
+          </ul><!-- End Portfolio Filters -->
+
+          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-gui">
+              <div class="portfolio-content h-100">
+                <img src="static/assets/img/projects/gui-1.jpg" class="img-fluid" alt="text-to-morse">
+                <div class="portfolio-info">
+                  <h4>GUI</h4>
+                  <p>Hist Painting</p>
+                  <a href="static/assets/img/projects/gui-1.jpg" title="" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="https://github.com/Prathamesh326/Hist_Painting.git" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-script">
+              <div class="portfolio-content h-100">
+                <img src="static/assets/img/projects/scripting1.jpg" class="img-fluid" alt="text-to-morse">
+                <div class="portfolio-info">
+                  <h4>Python Scripting</h4>
+                  <p>Text to Morse Code Converter</p>
+                  <a href="static/assets/img/projects/scripting1.jpg" title="This Python-based project allows users to convert plain text into Morse code. It provides a simple interface where users can input text, and the corresponding Morse code will be displayed. Any unsupported characters will be reported back to the user." data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="https://github.com/Prathamesh326/Text-to-Morse-Code-Converter" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-ml">
+              <div class="portfolio-content h-100">
+                <img src="static/assets/img/projects/ml1.jpg" class="img-fluid" alt="a2sl">
+                <div class="portfolio-info">
+                  <h4>Machine Learning</h4>
+                  <p>Audio-Text To Sign Language Translator</p>
+                  <a href="static/assets/img/projects/ml1.jpg" title="Machine Learning <br>abcd" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="https://github.com/Prathamesh326/Audio-Text-To-Sign-Language-Translator.git" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-script">
+              <div class="portfolio-content h-100">
+                <img src="static/assets/img/projects/scripting2.jpg" class="img-fluid" alt="text-to-morse">
+                <div class="portfolio-info">
+                  <h4>Python Scripting</h4>
+                  <p>Tic-Tac-Toe</p>
+                  <a href="static/assets/img/projects/scripting2.jpg" title="Python Scripting" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="https://github.com/Prathamesh326/Tic-Tac-Toe.git" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-ml">
+              <div class="portfolio-content h-100">
+                <img src="static/assets/img/projects/ml2.jpg" class="img-fluid" alt="spam-classifier">
+                <div class="portfolio-info">
+                  <h4>Machine Learning</h4>
+                  <p>SMS Spam Detection Classifier</p>
+                  <a href="static/assets/img/projects/ml2.jpg" title="Machine Learning" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="https://github.com/Prathamesh326/SMS_Spam_Classifier.git" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+          </div><!-- End Portfolio Container -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Portfolio Section -->
+
+  </main>
+
+{% include "footer.html" %}
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="static/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="static/assets/vendor/php-email-form/validate.js"></script>
+  <script src="static/assets/vendor/aos/aos.js"></script>
+  <script src="static/assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="static/assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="static/assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="static/assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="static/assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="static/assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="static/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="static/assets/js/main.js"></script>
+
+</body>
+
+</html>
