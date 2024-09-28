@@ -1,8 +1,8 @@
 from flask import Flask, render_template, request
 import smtplib
 
-EMAIL = "pratzz326@gmail.com"
-PASSWORD = "qbtzclchghuvkjpx"
+# EMAIL = "pratzz326@gmail.com"
+# PASSWORD = ""
 
 app = Flask(__name__)
 
@@ -39,7 +39,7 @@ def contact():
         email = request.form.get('email')
         subject = request.form.get('subject')
         message = request.form.get('message')
-        send_mail(name, email, subject, message)
+        # send_mail(name, email, subject, message)
 
         return render_template("contact.html", sent=True)
     return render_template("contact.html")
