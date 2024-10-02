@@ -52,6 +52,3 @@ def send_mail(name, email, subject, message):
         connection.login(EMAIL, PASSWORD)
         connection.sendmail(EMAIL, PASSWORD, email_message)
 
-
-if __name__ == '__main__':
-    app.run(debug=True)

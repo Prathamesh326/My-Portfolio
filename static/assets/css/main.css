@@ -821,6 +821,14 @@ section,
   line-height: 0;
 }
 
+.font {
+    font-weight: 300;
+    font-family: 'Roboto';
+    text-align: left;
+    font-size: 14px;
+    line-height: 2.5;
+}
+
 /*--------------------------------------------------------------
 # Stats Section
 --------------------------------------------------------------*/
