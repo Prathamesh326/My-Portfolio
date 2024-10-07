@@ -35,26 +35,26 @@
 <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
-      <a href="index.html" class="logo d-flex align-items-center">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-         <img src="static/assets/img/P-Letter-Logo.jpg" alt="">
-        <h1 class="sitename">Portfolio</h1>
-      </a>
+        <a href="index.html" class="logo d-flex align-items-center">
+            <!-- Uncomment the line below if you also wish to use an image logo -->
+            <img src="static/assets/img/P-Letter-Logo.jpg" alt="">
+            <h1 class="sitename">Portfolio</h1>
+        </a>
 
-      <nav id="navmenu" class="navmenu">
-        <ul>
-            <li><a href="{{ url_for("home") }}" >Home</a></li>
-            <li><a href="{{ url_for("about") }}" class="active">About</a></li>
-            <li><a href="{{ url_for("education") }}">Education</a></li>
-            <li><a href="{{ url_for("projects") }}">Projects</a></li>
-            <li><a href="{{ url_for("certifications") }}">Certifications</a></li>
-            <li><a href="{{ url_for("contact") }}">Contact</a></li>
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
+        <nav id="navmenu" class="navmenu">
+            <ul>
+                <li><a href="{{ url_for("home") }}" >Home</a></li>
+                <li><a href="{{ url_for("about") }}" class="active">About</a></li>
+                <li><a href="{{ url_for("education") }}">Education</a></li>
+                <li><a href="{{ url_for("projects") }}">Projects</a></li>
+                <li><a href="{{ url_for("certifications") }}">Certifications</a></li>
+                <li><a href="{{ url_for("contact") }}">Contact</a></li>
+            </ul>
+            <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
 
     </div>
-  </header>
+</header>
 
 <main class="main">
 
@@ -132,19 +132,29 @@
             <div class="row skills-content skills-animation">
 
                 <div class="col-lg-10">
-
-                    <div class="d-flex gap-2 justify-content-left py-5 custom-badges">
+                    <div class="d-flex flex-wrap gap-2 justify-content-left justify-content-md-center py-5 custom-badges">
                         <span class="badge">Python</span>
+                        <span class="badge">Flask</span>
+                        <span class="badge">WebDriver</span>
+                        <span class="badge">Selenium</span>
+                        <span class="badge">bs4</span>
+                        <span class="badge">Django</span>
+                        <span class="badge">REST framework</span>
+                        <span class="badge">OOPS</span>
                         <span class="badge">HTML</span>
                         <span class="badge">CSS</span>
                         <span class="badge">Java</span>
                         <span class="badge">Data Visualization</span>
+                        <span class="badge">MongoDb</span>
+                        <span class="badge">SQL</span>
                         <span class="badge">NLP</span>
+                        <span class="badge">Automation</span>
+                        <span class="badge">Web Scrapping</span>
                         <span class="badge">Machine Learning</span>
                         <span class="badge">Statistical Data Analysis</span>
                     </div>
-
                 </div>
+
             </div>
         </div>
 
@@ -162,7 +172,8 @@
         <div class="container">
 
             <div class="row gy-4">
-                <h6 style="line-height: 1.5;">Presented a paper titled <strong>"Smart Video Surveillance System for Crime Prevention:
+                <h6 style="line-height: 1.5;">Presented a paper titled <strong>"Smart Video Surveillance System for
+                    Crime Prevention:
                     Using Deep Learning"</strong> at the 5th International Conference on Advances in
                     Information Communication Technology & Computing (AICTC-2024), South
                     Kazakhstan Pedagogical University, Shymkent, Republic of Kazakhstan.</h6>
