@@ -1,56 +1,41 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect, url_for
 import smtplib
+import os
+from dotenv import load_dotenv
 
-# EMAIL = "pratzz326@gmail.com"
-# PASSWORD = ""
+load_dotenv()
+EMAIL = os.getenv("EMAIL")
+EMAIL_PASSWORD = os.getenv("EMAIL_PASSWORD")
 
 app = Flask(__name__)
 
-
-@app.route("/")
+@app.route("/", methods=["GET"])
 def home():
     return render_template('index.html')
 
-
-@app.route("/about")
-def about():
-    return render_template('about.html')
-
-
-@app.route("/education")
-def education():
-    return render_template("education.html")
-
-
-@app.route("/projects")
-def projects():
-    return render_template("projects.html")
-
-
-@app.route("/certifications")
-def certifications():
-    return render_template("certifications.html")
-
-
-@app.route("/contact", methods=['POST', 'GET'])
+@app.route("/contact", methods=['POST'])
 def contact():
     if request.method == 'POST':
         name = request.form.get('name')
         email = request.form.get('email')
         subject = request.form.get('subject')
         message = request.form.get('message')
-        # send_mail(name, email, subject, message)
-
-        return render_template("contact.html", sent=True)
-    return render_template("contact.html")
-
+        sent = False
+        error = None
+        try:
+            send_mail(name, email, subject, message)
+            sent = True
+        except Exception as e:
+            error = str(e)
+        return render_template("index.html", sent=sent, error=error, scroll_to_contact=True)
+    return redirect(url_for('home'))
 
 def send_mail(name, email, subject, message):
-    email_message = f"Subject: {subject}\n\nName: {name}\nEmail: {email}\nMessage:{message}"
+    email_message = f"Subject: {subject}\n\nName: {name}\nEmail: {email}\nMessage: {message}"
     with smtplib.SMTP("smtp.gmail.com", port=587) as connection:
         connection.starttls()
-        connection.login(EMAIL, PASSWORD)
-        connection.sendmail(EMAIL, PASSWORD, email_message)
+        connection.login(EMAIL, EMAIL_PASSWORD)
+        connection.sendmail(EMAIL, EMAIL, email_message)
 
 
 
