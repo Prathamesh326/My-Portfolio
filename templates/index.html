@@ -1,3 +1,46 @@
+{% set projects = [
+  {"img": "ds-1.webp", "title": "Data Science", "name": "Space Mission Analysis", "desc": "Analysis of space mission data, Cold War space race, launch statistics, and more.", "link": "https://github.com/Prathamesh326/Space-Mission-Analaysis.git", "category": "datascience"},
+  {"img": "ml1.jpg", "title": "ML", "name": "Audio-Text To Sign Language Translator", "desc": "Translates audio/text to sign language using ML.", "link": "https://github.com/Prathamesh326/Audio-Text-To-Sign-Language-Translator.git", "category": "ml"},
+  {"img": "gui-2.jpg", "title": "GUI", "name": "Image Watermarking Desktop App", "desc": "Add watermarks to images with text or logo using a Python Tkinter app.", "link": "https://github.com/Prathamesh326/Image-Watermarking-Desktop-App.git", "category": "gui"},
+  {"img": "ds-2.webp", "title": "Data Science", "name": "Analysis of Deaths Involving Police in the US", "desc": "Comprehensive analysis of police-related deaths in the US, exploring trends and demographics.", "link": "https://github.com/Prathamesh326/Analyse-Deaths-involving-Police-in-the-United-States.git", "category": "datascience"},
+  {"img": "gui-1.jpg", "title": "GUI", "name": "Hist Painting", "desc": "A creative painting application using Python GUI.", "link": "https://github.com/Prathamesh326/Hist_Painting.git", "category": "gui"},
+  {"img": "automation-1.webp", "title": "Automation", "name": "Instagram Follower Bot", "desc": "Automates following Instagram users using Selenium.", "link": "https://github.com/Prathamesh326/instagram-follower-bot.git", "category": "automation"},
+  {"img": "scripting1.jpg", "title": "Scripting", "name": "Text to Morse Code Converter", "desc": "Convert plain text into Morse code with a simple Python script.", "link": "https://github.com/Prathamesh326/Text-to-Morse-Code-Converter", "category": "scripting"},
+  {"img": "automation-4.webp", "title": "Automation", "name": "Automate Task and Reminder Management", "desc": "Automate task reminders and prioritization using Google Calendar API.", "link": "https://github.com/Prathamesh326/Automate-Task-and-Reminder-Management.git", "category": "automation"},
+  {"img": "automation-3.webp", "title": "Automation", "name": "Automate the Google Dinosaur Game", "desc": "Python script to play the Google Dinosaur game automatically using pyautogui.", "link": "https://github.com/Prathamesh326/Automate-the-Google-Dinosaur-Game.git", "category": "automation"},
+  {"img": "web-foundation-1.webp", "title": "Web Foundation", "name": "Blog Capstone Project", "desc": "A blog website with RESTful routing using Flask, styled with Bootstrap.", "link": "https://github.com/Prathamesh326/blog-capstone-project-RESTful-routing-upgraded-blog-website.git", "category": "webfoundation"},
+  {"img": "api-1.webp", "title": "API", "name": "Convert Pdf to Audiobook", "desc": "Convert PDF files into audio files using PyMuPDF and TTS API.", "link": "https://github.com/Prathamesh326/Convert-PDF-to-Audiobook.git", "category": "api"},
+  {"img": "dl-1.webp", "title": "DL", "name": "Smart Surveillance System", "desc": "YOLO/Darknet-based system for real-time object detection and surveillance.", "link": "https://github.com/Prathamesh326/SmartSurveillanceSystem-main.git", "category": "dl"},
+  {"img": "ws-1.webp", "title": "Scraping", "name": "Custom Web Scraper", "desc": "Scrape product data from e-commerce sites using Selenium and Python.", "link": "https://github.com/Prathamesh326/Custom-Web-Scraper.git", "category": "scraping"},
+  {"img": "game-1.jpg", "title": "Game", "name": "Breakout Game", "desc": "Classic brick-breaking arcade game built using Python's Turtle graphics module.", "link": "https://github.com/Prathamesh326/Breakout-Game.git", "category": "game"},
+  {"img": "game-2.jpg", "title": "Game", "name": "Snake Game", "desc": "Classic snake game built with Python's turtle module. Grow the snake, avoid walls and tail.", "link": "https://github.com/Prathamesh326/SnakeGame.git", "category": "game"},
+  {"img": "game-3.webp", "title": "Game", "name": "Space Invaders", "desc": "Modernized Space Invaders game built using Pygame, with sound and animations.", "link": "https://github.com/Prathamesh326/Space-Invaders-Game.git", "category": "game"},
+  {"img": "automation-2.webp", "title": "Automation", "name": "LinkedIn Job Saver", "desc": "Automate saving job listings on LinkedIn using Selenium and Python.", "link": "https://github.com/Prathamesh326/Automating-Job-Applications-on-Linkedin.git", "category": "automation"},
+  {"img": "scripting2.jpg", "title": "Scripting", "name": "Tic-Tac-Toe", "desc": "A two-player Tic-Tac-Toe game in Python, tracks scores and supports multiple rounds.", "link": "https://github.com/Prathamesh326/Tic-Tac-Toe.git", "category": "scripting"},
+  {"img": "ml2.jpg", "title": "ML", "name": "SMS Spam Detection Classifier", "desc": "Detect spam SMS messages using machine learning techniques.", "link": "https://github.com/Prathamesh326/SMS_Spam_Classifier.git", "category": "ml"},
+  {"img": "ip-1.webp", "title": "Image Processing", "name": "Image Colour Palette Generator", "desc": "Extract dominant colors from images and display their RGB/Hex codes.", "link": "https://github.com/Prathamesh326/Image-Color-Palette-Generator.git", "category": "imageprocessing"},
+  {"img": "web-foundation-2.jpg", "title": "Web Foundation", "name": "Top 10 Movies Website", "desc": "Manage your top 10 favorite movies, add/edit/rate/delete, with data from TMDb API.", "link": "https://github.com/Prathamesh326/Top-10-Movies-Website.git", "category": "webfoundation"},
+  {"img": "gui-3.jpeg", "title": "GUI", "name": "Typing Speed Test Desktop Application", "desc": "Test your typing speed in WPM with a Python Tkinter desktop app.", "link": "https://github.com/Prathamesh326/Typing-Speed-Test-Desktop-Application-GUI.git", "category": "gui"},
+  {"img": "web-foundation-3.png", "title": "Web Foundation", "name": "Cafe and wifi website", "desc": "Find cafes with good Wi-Fi and coffee. Add, view, and manage cafes using Flask and SQLite.", "link": "https://github.com/Prathamesh326/cafe-and-wifi-website.git", "category": "webfoundation"},
+  {"img": "web-foundation-4.png", "title": "Web Foundation", "name": "To-do List Website", "desc": "A web-based Todo List app with user authentication, task management, and due dates.", "link": "https://github.com/Prathamesh326/Todo-List-Website.git", "category": "webfoundation"},
+  {"img": "gui-4.webp", "title": "GUI", "name": "Disappearing Text Writing App", "desc": "A writing app where your text vanishes if you stop typing for 5 seconds.", "link": "https://github.com/Prathamesh326/Disappearing-Text-Writing-app.git", "category": "gui"},
+  {"img": "api-2.webp", "title": "API", "name": "Stock Price Tracker", "desc": "Track stock prices using MarketStack API in a Flask web app.", "link": "https://github.com/Prathamesh326/Stock-Price-Tracker.git", "category": "api"}
+] %}
+
+{% set categories = [
+  {"key": "all", "label": "All"},
+  {"key": "datascience", "label": "Data Science"},
+  {"key": "ml", "label": "ML"},
+  {"key": "gui", "label": "GUI"},
+  {"key": "automation", "label": "Automation"},
+  {"key": "scripting", "label": "Scripting"},
+  {"key": "webfoundation", "label": "Web Foundation"},
+  {"key": "api", "label": "API"},
+  {"key": "dl", "label": "DL"},
+  {"key": "scraping", "label": "Scraping"},
+  {"key": "game", "label": "Game"},
+  {"key": "imageprocessing", "label": "Image Processing"}
+] %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -40,11 +83,13 @@
         <ul>
           <li><a href="#hero" class="active">Home</a></li>
           <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
+          <li><a href="#workexperience">Experience</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#skills">Skills</a></li>
           <li><a href="#portfolio">Portfolio</a></li>
           <li><a href="#certifications">Certifications</a></li>
           <li><a href="#contact">Contact</a></li>
-                </ul>
+        </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
         </div>
@@ -92,55 +137,93 @@
         </div>
     </section>
 
-      <!-- Experience Section -->
-      <section id="workexperience" class="workexperience section">
-        <div class="container section-title" data-aos="fade-up">
-          <h2>Work Experience</h2>
+    <!-- Experience Section -->
+    <section id="workexperience" class="workexperience section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Experience</h2>
+        <p>Professional experience and roles held.</p>
+      </div>
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row gy-4 justify-content-between">
+          <div class="col-lg-12 content">
+            <div class="mb-3">
+              <div class="d-flex justify-content-between align-items-center">
+                <div>
+                  <span class="work-role">Software Developer</span><br>
+                  <span class="work-company">Transvolt Mobility Pvt. Ltd.</span>
+                          </div>
+                <span class="work-date">NOV 2024- PRESENT</span>
+                      </div>
+              <ul class="work-list">
+                <li><b>Developed</b> and <b>maintained</b> scalable backend systems using <b>Django</b> and <b>FastAPI</b>, powering EV analytics for 200+ vehicles with over 1M data points processed daily.</li>
+                <li>Built <b>automated</b> reporting workflows, <b>reducing</b> manual effort by 30% and delivering key insights to senior stakeholders.</li>
+                <li><b>Optimized</b> data access using raw <b>SQL</b> and <b>ORM</b>, and implemented secure <b>authorization</b> across dual backend infrastructures.</li>
+                <li><b>Deployed</b> applications using <b>Daphne</b> and <b>Nginx</b>, improving server reliability and load handling by 20%.</li>
+              </ul>
+                  </div>
+            <div class="mb-3">
+              <div class="d-flex justify-content-between align-items-center">
+                <div>
+                  <span class="work-role">IT Data Analyst/Backend Intern</span><br>
+                  <span class="work-company">Transvolt Mobility Pvt. Ltd.</span>
+                          </div>
+                <span class="work-date">AUGUST 2024 - OCT 2024</span>
+                      </div>
+              <ul class="work-list">
+                <li><b>Contributed to the development</b> of backend systems by integrating real-time data pipelines and building <b>RESTful APIs</b>, which enhanced data accessibility across platforms.</li>
+                <li><b>Optimized</b> database performance through efficient <b>SQL</b> queries and data modeling, resulting in a <b>15% improvement</b> in data retrieval speeds and system responsiveness.</li>
+                <li><b>Collaborated cross-functionally to embed ADAS (Advanced Driver Assistance Systems)</b> modules, such as driver behavior scoring and seatbelt detection, which <b>elevated overall system intelligence and safety metrics</b>.</li>
+              </ul>
+                          </div>
+                      </div>
+                  </div>
+                          </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Education</h2>
+        <p>Educational background and academic achievements.</p>
+      </div>
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row gy-4 justify-content-between">
+          <div class="col-lg-12 content">
+            <div class="mb-3" style="background-color: #232833; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.2); color: #e0e0e0; padding: 20px;">
+              <div class="mb-3 d-flex justify-content-between align-items-center">
+                <div>
+                  <span style="font-weight: 600; font-size: 1.1em; color: #f5f5f5;">Bachelor of Engineering</span> <span style="color: #bbbbbb;">(2020 - 2024)</span><br>
+                  <span style="font-style: italic; color: #bbbbbb;">Vidyavardhini's College of Engineering &amp; Technology, Vasai, India</span>
+                </div>
+                <span style="font-size: 0.95em; color: #a0a0a0; font-weight: 500;">CGPA 8.23</span>
+              </div>
+              <div class="mb-3 d-flex justify-content-between align-items-center">
+                <div>
+                  <span style="font-weight: 600; font-size: 1.1em; color: #f5f5f5;">HSC</span> <span style="color: #bbbbbb;">(2018 - 2020)</span><br>
+                  <span style="font-style: italic; color: #bbbbbb;">Bhaskar Waman Thakur College of Science, Virar, India</span>
+                </div>
+                <span style="font-size: 0.95em; color: #a0a0a0; font-weight: 500;">Percentage 65.08</span>
+              </div>
+              <div class="d-flex justify-content-between align-items-center">
+                <div>
+                  <span style="font-weight: 600; font-size: 1.1em; color: #f5f5f5;">SSC</span> <span style="color: #bbbbbb;">(2017 - 2018)</span><br>
+                  <span style="font-style: italic; color: #bbbbbb;">Geetanjali Vidyalaya, Virar, India</span>
+                </div>
+                <span style="font-size: 0.95em; color: #a0a0a0; font-weight: 500;">Percentage 84.00</span>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="container" data-aos="fade-up" data-aos-delay="100">
-          <div class="row gy-4 justify-content-between">
-            <div class="col-lg-12 content">
-              <div class="mb-3">
-                <div class="d-flex justify-content-between align-items-center">
-                  <div>
-                    <span class="work-role">Software Developer</span><br>
-                    <span class="work-company">Transvolt Mobility Pvt. Ltd.</span>
-                            </div>
-                  <span class="work-date">NOV 2024- PRESENT</span>
-                        </div>
-                <ul class="work-list">
-                  <li><b>Developed</b> and <b>maintained</b> scalable backend systems using <b>Django</b> and <b>FastAPI</b>, powering EV analytics for 200+ vehicles with over 1M data points processed daily.</li>
-                  <li>Built <b>automated</b> reporting workflows, <b>reducing</b> manual effort by 30% and delivering key insights to senior stakeholders.</li>
-                  <li><b>Optimized</b> data access using raw <b>SQL</b> and <b>ORM</b>, and implemented secure <b>authorization</b> across dual backend infrastructures.</li>
-                  <li><b>Deployed</b> applications using <b>Daphne</b> and <b>Nginx</b>, improving server reliability and load handling by 20%.</li>
-                </ul>
-                    </div>
-              <div class="mb-3">
-                <div class="d-flex justify-content-between align-items-center">
-                  <div>
-                    <span class="work-role">IT Data Analyst/Backend Intern</span><br>
-                    <span class="work-company">Transvolt Mobility Pvt. Ltd.</span>
-                            </div>
-                  <span class="work-date">AUGUST 2024 - OCT 2024</span>
-                        </div>
-                <ul class="work-list">
-                  <li><b>Contributed to the development</b> of backend systems by integrating real-time data pipelines and building <b>RESTful APIs</b>, which enhanced data accessibility across platforms.</li>
-                  <li><b>Optimized</b> database performance through efficient <b>SQL</b> queries and data modeling, resulting in a <b>15% improvement</b> in data retrieval speeds and system responsiveness.</li>
-                  <li><b>Collaborated cross-functionally to embed ADAS (Advanced Driver Assistance Systems)</b> modules, such as driver behavior scoring and seatbelt detection, which <b>elevated overall system intelligence and safety metrics</b>.</li>
-                </ul>
-                            </div>
-                        </div>
-                    </div>
-                            </div>
-      </section>
+      </div>
+    </section>
 
     <!-- Services Section -->
-    <section id="services" class="services section">
+    <section id="skills" class="services section">
       <div class="container section-title" data-aos="fade-up">
-        <h2>Skills & Services</h2>
+        <h2>Skills</h2>
         <p>Technical skills and areas of expertise</p>
-                        </div>
-        <div class="container">
+      </div>
+      <div class="container">
         <div class="row gy-4">
           <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="100">
             <div class="icon flex-shrink-0"><i class="bi bi-cpu"></i></div>
@@ -193,55 +276,31 @@
       <div class="container section-title" data-aos="fade-up">
         <h2>Portfolio</h2>
         <p>Selected projects and work samples</p>
-                        </div>
+      </div>
       <div class="container">
         <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
-          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
-            {% set projects = [
-              {"img": "ds-1.webp", "title": "Data Science: Space Mission Analysis", "desc": "Analysis of space mission data, Cold War space race, launch statistics, and more.", "link": "https://github.com/Prathamesh326/Space-Mission-Analaysis.git"},
-              {"img": "ml1.jpg", "title": "Machine Learning: Audio-Text To Sign Language Translator", "desc": "Translates audio/text to sign language using ML.", "link": "https://github.com/Prathamesh326/Audio-Text-To-Sign-Language-Translator.git"},
-              {"img": "gui-2.jpg", "title": "GUI: Image Watermarking Desktop App", "desc": "Add watermarks to images with text or logo using a Python Tkinter app.", "link": "https://github.com/Prathamesh326/Image-Watermarking-Desktop-App.git"},
-              {"img": "ds-2.webp", "title": "Data Science: Analysis of Deaths Involving Police in the US", "desc": "Comprehensive analysis of police-related deaths in the US, exploring trends and demographics.", "link": "https://github.com/Prathamesh326/Analyse-Deaths-involving-Police-in-the-United-States.git"},
-              {"img": "gui-1.jpg", "title": "GUI: Hist Painting", "desc": "A creative painting application using Python GUI.", "link": "https://github.com/Prathamesh326/Hist_Painting.git"},
-              {"img": "automation-1.webp", "title": "Automation: Instagram Follower Bot", "desc": "Automates following Instagram users using Selenium.", "link": "https://github.com/Prathamesh326/instagram-follower-bot.git"},
-              {"img": "scripting1.jpg", "title": "Python Scripting: Text to Morse Code Converter", "desc": "Convert plain text into Morse code with a simple Python script.", "link": "https://github.com/Prathamesh326/Text-to-Morse-Code-Converter"},
-              {"img": "automation-4.webp", "title": "Automation: Automate Task and Reminder Management", "desc": "Automate task reminders and prioritization using Google Calendar API.", "link": "https://github.com/Prathamesh326/Automate-Task-and-Reminder-Management.git"},
-              {"img": "automation-3.webp", "title": "Automation: Automate the Google Dinosaur Game", "desc": "Python script to play the Google Dinosaur game automatically using pyautogui.", "link": "https://github.com/Prathamesh326/Automate-the-Google-Dinosaur-Game.git"},
-              {"img": "web-foundation-1.webp", "title": "Web Foundation: Blog Capstone Project", "desc": "A blog website with RESTful routing using Flask, styled with Bootstrap.", "link": "https://github.com/Prathamesh326/blog-capstone-project-RESTful-routing-upgraded-blog-website.git"},
-              {"img": "api-1.webp", "title": "API: Convert Pdf to Audiobook", "desc": "Convert PDF files into audio files using PyMuPDF and TTS API.", "link": "https://github.com/Prathamesh326/Convert-PDF-to-Audiobook.git"},
-              {"img": "dl-1.webp", "title": "Deep Learning: Smart Surveillance System", "desc": "YOLO/Darknet-based system for real-time object detection and surveillance.", "link": "https://github.com/Prathamesh326/SmartSurveillanceSystem-main.git"},
-              {"img": "ws-1.webp", "title": "Web Scraping: Custom Web Scraper", "desc": "Scrape product data from e-commerce sites using Selenium and Python.", "link": "https://github.com/Prathamesh326/Custom-Web-Scraper.git"},
-              {"img": "game-1.jpg", "title": "Game: Breakout Game", "desc": "Classic brick-breaking arcade game built using Python's Turtle graphics module.", "link": "https://github.com/Prathamesh326/Breakout-Game.git"},
-              {"img": "game-2.jpg", "title": "Game: Snake Game", "desc": "Classic snake game built with Python's turtle module. Grow the snake, avoid walls and tail.", "link": "https://github.com/Prathamesh326/SnakeGame.git"},
-              {"img": "game-3.webp", "title": "Game: Space Invaders", "desc": "Modernized Space Invaders game built using Pygame, with sound and animations.", "link": "https://github.com/Prathamesh326/Space-Invaders-Game.git"},
-              {"img": "automation-2.webp", "title": "Automation: LinkedIn Job Saver", "desc": "Automate saving job listings on LinkedIn using Selenium and Python.", "link": "https://github.com/Prathamesh326/Automating-Job-Applications-on-Linkedin.git"},
-              {"img": "scripting2.jpg", "title": "Python Scripting: Tic-Tac-Toe", "desc": "A two-player Tic-Tac-Toe game in Python, tracks scores and supports multiple rounds.", "link": "https://github.com/Prathamesh326/Tic-Tac-Toe.git"},
-              {"img": "ml2.jpg", "title": "Machine Learning: SMS Spam Detection Classifier", "desc": "Detect spam SMS messages using machine learning techniques.", "link": "https://github.com/Prathamesh326/SMS_Spam_Classifier.git"},
-              {"img": "ip-1.webp", "title": "Image Processing: Image Colour Palette Generator", "desc": "Extract dominant colors from images and display their RGB/Hex codes.", "link": "https://github.com/Prathamesh326/Image-Color-Palette-Generator.git"},
-              {"img": "web-foundation-2.jpg", "title": "Web Foundation: Top 10 Movies Website", "desc": "Manage your top 10 favorite movies, add/edit/rate/delete, with data from TMDb API.", "link": "https://github.com/Prathamesh326/Top-10-Movies-Website.git"},
-              {"img": "gui-3.jpeg", "title": "GUI: Typing Speed Test Desktop Application", "desc": "Test your typing speed in WPM with a Python Tkinter desktop app.", "link": "https://github.com/Prathamesh326/Typing-Speed-Test-Desktop-Application-GUI.git"},
-              {"img": "web-foundation-3.png", "title": "Web Foundation: Cafe and wifi website", "desc": "Find cafes with good Wi-Fi and coffee. Add, view, and manage cafes using Flask and SQLite.", "link": "https://github.com/Prathamesh326/cafe-and-wifi-website.git"},
-              {"img": "web-foundation-4.png", "title": "Web Foundation: To-do List Website", "desc": "A web-based Todo List app with user authentication, task management, and due dates.", "link": "https://github.com/Prathamesh326/Todo-List-Website.git"},
-              {"img": "gui-4.webp", "title": "GUI: Disappearing Text Writing App", "desc": "A writing app where your text vanishes if you stop typing for 5 seconds.", "link": "https://github.com/Prathamesh326/Disappearing-Text-Writing-app.git"},
-              {"img": "api-2.webp", "title": "API: Stock Price Tracker", "desc": "Track stock prices using MarketStack API in a Flask web app.", "link": "https://github.com/Prathamesh326/Stock-Price-Tracker.git"}
-            ] %}
-            {% for project in projects %}
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item">
-              <div class="portfolio-content h-100">
-                <img src="{{ url_for('static', filename='assets/img/projects/' + project.img) }}" class="img-fluid" alt="{{ project.title }}">
-                <div class="portfolio-info">
-                  <h4>{{ project.title }}</h4>
-                  <p>{{ project.desc }}</p>
-                  <a href="{{ url_for('static', filename='assets/img/projects/' + project.img) }}" title="{{ project.title }}" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <div class="glightbox-desc" style="display:none">{{ project.desc }}</div>
-                  <a href="{{ project.link }}" title="GitHub" class="details-link"><i class="bi bi-github"></i></a>
-                            </div>
-                        </div>
-                    </div>
+          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
+            {% for cat in categories %}
+              <li data-filter="{% if cat.key == 'all' %}*{% else %}.filter-{{ cat.key }}{% endif %}" {% if loop.first %}class="filter-active"{% endif %}>{{ cat.label }}</li>
             {% endfor %}
-                        </div>
-            </div>
+          </ul>
+          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+            {% for project in projects %}
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-{{ project.category }}">
+                <div class="portfolio-content h-100">
+                  <img src="{{ url_for('static', filename='assets/img/projects/' + project.img) }}" class="img-fluid" alt="{{ project.name }}">
+                  <div class="portfolio-info">
+                    <h4>{{ project.title }}</h4>
+                    <p>{{ project.name }}</p>
+                    <a href="{{ url_for('static', filename='assets/img/projects/' + project.img) }}" title="{{ project.desc }}" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                    <a href="{{ project.link }}" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                  </div>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Certifications Section -->
@@ -295,7 +354,7 @@
                 <i class="bi bi-envelope flex-shrink-0"></i>
                 <div>
                   <h3>Email</h3>
-                    <p>prathameshshinde@gmail.com</p>
+                    <p>prathameshshinde326@gmail.com</p>
                 </div>
               </div>
             </div>
